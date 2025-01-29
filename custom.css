@@ -1,0 +1,7 @@
+.copy-container:hover .copy-icon {
+  opacity: 1;
+}
+.copy-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
