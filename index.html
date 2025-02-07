@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="el" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    The Greek Ipsum</title>
+    <title>The Greek Ipsum</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="custom.css" />
+    <script>
+      // Add this to enable dark mode in Tailwind
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
   </head>
-  <body class="bg-gray-900 text-white font-sans">
+  <body
+    class="bg-gray-900 text-white font-sans dark:bg-gray-100 dark:text-gray-900">
     <div class="container mx-auto px-4 py-8">
       <!-- Header Section -->
       <header
         class="text-center mb-8 border-y-4 border-sky-600/75 max-w-7xl mx-auto py-4">
         <h1 class="text-4xl font-bold mb-2">The Greek Ipsum</h1>
-        <p class="text-lg text-gray-400">
+        <p class="text-lg text-gray-400 dark:text-gray-600">
           Για εκείνους που ρωτούν, "Τι είναι αυτό το Lorem Ipsum;"
         </p>
+        <!-- Dark/Light Mode Toggle -->
+        <button
+          id="theme-toggle"
+          class="mt-4 p-2 bg-gray-800 dark:bg-gray-200 rounded-full">
+          <span id="theme-icon" class="text-white dark:text-gray-900">🌙</span>
+        </button>
       </header>
 
       <!-- Main Content Section with 2-Column Layouts -->
@@ -23,16 +36,18 @@
         <!-- Headlines Section -->
         <section class="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div
-            class="col-span-1 flex flex-col justify-center border-r-2 border-slate-600/70">
+            class="col-span-1 flex flex-col justify-center border-r-2 border-slate-600/70 dark:border-slate-400/70">
             <h2 class="text-2xl font-semibold text-blue-400">Τίτλοι</h2>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-400 dark:text-gray-600 text-sm">
               Επιλέξτε μικρούς ή μεγάλους τίτλους κράτησης θέσης.
             </p>
           </div>
 
           <div class="col-span-3 space-y-6">
             <div class="copy-container">
-              <h1 class="text-3xl font-semibold">Αυτός είναι ένας ψεύτικος τίτλος</h1>
+              <h1 class="text-3xl font-semibold">
+                Αυτός είναι ένας ψεύτικος τίτλος
+              </h1>
               <div class="mt-2">
                 <button
                   class="copy-icon text-blue-400 text-sm flex items-center"
@@ -72,15 +87,15 @@
         <!-- Paragraphs Section -->
         <section class="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div
-            class="col-span-1 flex flex-col justify-center border-r-2 border-slate-600/70">
+            class="col-span-1 flex flex-col justify-center border-r-2 border-slate-600/70 dark:border-slate-400/70">
             <h2 class="text-2xl font-semibold text-blue-400">Παράγραφοι</h2>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-400 dark:text-gray-600 text-sm">
               Αντιγράψτε και επικολλήστε όσο ή όσο λίγο θέλετε.
             </p>
           </div>
           <div class="col-span-3 space-y-8">
             <div class="copy-container relative">
-              <p class="text-gray-300">
+              <p class="text-gray-300 dark:text-gray-700">
                 Μια φορά κι έναν καιρό, ήταν μια γριά που ζούσε σε ένα μικρό
                 σπίτι στο δάσος. Κάθε πρωί μάζευε λουλούδια και μιλούσε με τα
                 ζώα. Ένα βράδυ, ένα μαγικό ξωτικό επισκέφθηκε το σπίτι της και
@@ -95,7 +110,7 @@
               </div>
             </div>
             <div class="copy-container relative">
-              <p class="text-gray-300">
+              <p class="text-gray-300 dark:text-gray-700">
                 Στην κορυφή ενός λόφου υπήρχε ένας δράκος που φύλαγε έναν
                 κρυμμένο θησαυρό. Οι γενναίοι που τολμούσαν να τον πλησιάσουν,
                 έπρεπε να απαντήσουν σε τρεις δύσκολες ερωτήσεις. Ελάχιστοι το
@@ -118,16 +133,17 @@
         <!-- Lists Section -->
         <section class="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div
-            class="col-span-1 flex flex-col justify-center border-r-2 border-slate-600/70">
+            class="col-span-1 flex flex-col justify-center border-r-2 border-slate-600/70 dark:border-slate-400/70">
             <h2 class="text-2xl font-semibold text-blue-400">Λίστες</h2>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-400 dark:text-gray-600 text-sm">
               Οργανώστε το περιεχόμενό σας με λίστες.
             </p>
           </div>
           <div class="col-span-3 space-y-6">
             <div class="copy-container relative">
               <h3 class="text-lg font-semibold mb-2">Λίστες με Κουκίδες</h3>
-              <ul class="list-disc list-inside space-y-2 text-gray-300">
+              <ul
+                class="list-disc list-inside space-y-2 text-gray-300 dark:text-gray-700">
                 <li>Αυτό είναι ένα ψεύτικο στοιχείο.</li>
                 <li>Θα το αλλάξουμε αργότερα.</li>
                 <li>Χρησιμοποιούμε κείμενο "Lorem Ipsum".</li>
@@ -142,7 +158,8 @@
             </div>
             <div class="copy-container relative">
               <h3 class="text-lg font-semibold mb-2">Αριθμημένες Λίστες</h3>
-              <ol class="list-decimal list-inside space-y-2 text-gray-300">
+              <ol
+                class="list-decimal list-inside space-y-2 text-gray-300 dark:text-gray-700">
                 <li>Αυτό είναι ένα ψεύτικο στοιχείο.</li>
                 <li>Θα το αλλάξουμε αργότερα.</li>
                 <li>Χρησιμοποιούμε κείμενο "Lorem Ipsum".</li>
@@ -161,7 +178,8 @@
 
       <!-- Footer Section -->
     </div>
-    <footer class="text-center mt-8 text-gray-500 text-sm bg-black py-4">
+    <footer
+      class="text-center mt-8 text-gray-500 dark:text-gray-400 text-sm bg-black dark:bg-gray-200 py-4">
       <p>
         © 2025 | Δημιουργήθηκε για χρήση σε ιστότοπους από τον Θοδωρή Λ.
         Καρτσιώτη
@@ -169,6 +187,23 @@
     </footer>
 
     <script>
+      // Dark/Light Mode Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const html = document.documentElement;
+
+      // Check for saved theme in localStorage
+      const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark if no preference
+      html.classList.toggle('dark', savedTheme === 'dark');
+      themeIcon.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+      themeToggle.addEventListener('click', () => {
+        const isDark = html.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeIcon.textContent = isDark ? '🌙' : '☀️';
+      });
+
+      // Copy Text Function
       function copyText(button) {
         const parent = button.parentElement.previousElementSibling;
         const text = parent.innerText || parent.textContent;
@@ -182,9 +217,10 @@
         });
       }
 
+      // Copy List Function
       function copyList(button, listType) {
-        const list = button.parentElement.previousElementSibling;
-        if (list.tagName.toLowerCase() === listType) {
+        const list = button.parentElement.querySelector(listType);
+        if (list) {
           const text = Array.from(list.children)
             .map((item) => item.innerText)
             .join('\n');
